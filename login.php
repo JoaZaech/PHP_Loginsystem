@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="backend/login_handling.php" method="POST">
-        <input type="email" name="login-email" placeholder="Email"><br>
-        <input type="password" name="login-pwd" placeholder="Password">
+        <input required type="email" name="login-email" placeholder="Email"><br>
+        <input required type="password" name="login-pwd" placeholder="Password">
         <button type="submit" name="login-submit">Einloggen</button>
     </form>
 </body>
