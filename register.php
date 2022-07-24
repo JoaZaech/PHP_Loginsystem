@@ -35,6 +35,11 @@
         <input required <?php echo "minlength=".ml_PWD; ?> type="password" name="register-password1" placeholder="Passwort1"><br>
         <input required <?php echo "minlength=".ml_PWD; ?> type="password" name="register-password2" placeholder="Passwort1.1"><br>
         <button type="submit" name="register-submit">Registrieren</button>
+        <?php 
+                if(isset($_GET['error'])){
+                        echo $_GET['error'];
+                }
+        ?>
     </form>
 </body>
 </html>

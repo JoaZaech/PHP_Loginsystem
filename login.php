@@ -11,6 +11,12 @@
         <input required type="email" name="login-email" placeholder="Email"><br>
         <input required type="password" name="login-pwd" placeholder="Password">
         <button type="submit" name="login-submit">Einloggen</button>
+        <?php 
+                if(isset($_GET['error'])){
+                    echo "<br>";
+                    echo $_GET['error'];
+                }
+        ?>
     </form>
 </body>
 </html>
