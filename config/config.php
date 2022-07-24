@@ -18,8 +18,13 @@ const ML_PLZ = "5";
 const ML_EMAIL = "62";
 // Minimale Länge für Passwörter: 
 const ml_PWD = "8";
-
+// Zur Überprüfung von der länge durch handler.php
 const FORM_LEN = array(
     ML_VORNAME, ML_NACHNAME, ML_STRASSE, ML_HAUSNUMMER,ML_STADT,
     ML_PLZ, ML_EMAIL
+);
+// Überprüft nur die Felder welche auch erforderlich sind 
+const FORM_EDP = array(
+    ED_VORNAME, ED_NACHNAME, ED_STRASSE, ED_HAUSNUMMER, ED_STADT,
+    ED_PLZ, ED_EMAIL
 );

@@ -5,4 +5,5 @@ if(isset($_POST['register-submit'])){
     $payload = toNormalizedArray($_POST);
     checkEmptyInput($payload, REGISTER_ERROR_URL);
     checkInputLength($payload, REGISTER_ERROR_URL);
+    validPasswords($_POST['register-password1'],$_POST['register-password2']);
 }
