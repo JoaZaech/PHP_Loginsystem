@@ -72,5 +72,7 @@ function returnErrorMessage($error_code){
             return "SQL Error bitte Admin kontaktieren";
         case 8: 
             return "Benutzer existiert bereits!";
+        case 9: 
+            return "Passwort oder Email falsch!";
     }
 }
