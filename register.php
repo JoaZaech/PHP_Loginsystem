@@ -32,8 +32,8 @@
         type="email" name="register-email" placeholder="Email"><br>
     
 <!---Passwörter: --->
-        <input required <?php echo "minlength=".ml_PWD; ?> type="text" name="register-password1" placeholder="Passwort1"><br>
-        <input required <?php echo "minlength=".ml_PWD; ?> type="text" name="register-password2" placeholder="Passwort1.1"><br>
+        <input required <?php echo "minlength=".ml_PWD; ?> type="password" name="register-password1" placeholder="Passwort1"><br>
+        <input required <?php echo "minlength=".ml_PWD; ?> type="password" name="register-password2" placeholder="Passwort1.1"><br>
         <button type="submit" name="register-submit">Registrieren</button>
     </form>
 </body>

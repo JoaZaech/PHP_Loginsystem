@@ -30,27 +30,26 @@ function checkInputLength($input){
         }
     }
 }
+// Überprüft die Datenart
+function checkDataTypes($plz, $hn){
+    if(!is_numeric($plz) || !is_numeric($hn)){
+        header("Location: ".REGISTER_ERROR_URL."error=".returnErrorMessage(6));
+        exit();
+    }
+}
 
+// Überprüft ob Passwort richtiges Format hat
 function validPasswords($pwd1, $pwd2){
     if(strcmp($pwd1,$pwd2) != 0){
         header("Location: ".REGISTER_ERROR_URL."error=".returnErrorMessage(3));
         exit();
     }
-    if(!is_valid_password($pwd1)){
-        header("Location: ".REGISTER_ERROR_URL."error=".returnErrorMessage(4));
-        exit();
-    }
 }
 
-function is_valid_password($password) {
-    $uppercase = preg_match('/@[A-Z]@/', $password);
-    $lowercase = preg_match('/@[a-z]@/', $password);
-    $number    = preg_match('/@[0-9]@/', $password);
-    $specialChars = preg_match('/@[^\w]@/', $password);
-    if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8){
-        return true;
-    }else{
-        return false;
+function validEmail($email,$url){
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        header("Location: ".$url."error=".returnErrorMessage(5));
+        exit();
     }
 }
 
@@ -65,5 +64,13 @@ function returnErrorMessage($error_code){
             return "Ungleiche Passwörter eingegeben";
         case 4: 
             return "Nicht sicheres Passwort!";
+        case 5: 
+            return "Falsches Email Format!";
+        case 6: 
+            return "Bitte entsprechende Felder mit Zahlen füllen!";
+        case 7: 
+            return "SQL Error bitte Admin kontaktieren";
+        case 8: 
+            return "Benutzer existiert bereits!";
     }
 }
