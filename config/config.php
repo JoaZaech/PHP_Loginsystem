@@ -1,4 +1,18 @@
 <?php 
+
+// Benutzer Existiert 
+const BE_ROWNAME = "Email";
+const BE_DATENNAME = 'register-email';
+
+// Benötigte Felder: 
+const BF_VORNAME = true;
+const BF_NACHNAME = true;
+const BF_STRASSE = true;
+const BF_HAUSNUMMER = true;
+const BF_STADT = true;
+const BF_PLZ = true;
+const BF_EMAIL = true;
+
 // Registerieren -> Erforderliche Daten (ED steht für "Erforderliche Daten")
 const ED_VORNAME = true;
 const ED_NACHNAME = true;
